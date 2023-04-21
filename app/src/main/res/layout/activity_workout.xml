@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/textViewWorkoutTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        android:text="Workout Remaining Time"
+        android:textSize="22sp"
+        android:fontFamily="sans-serif-light"
+        android:textStyle="bold"
+        android:typeface="sans"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/centerGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <TextView
+        android:id="@+id/textViewWorkoutTimeRemaining"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toStartOf="@+id/textViewSecondsLabel"
+        app:layout_constraintStart_toStartOf="@+id/centerGuideline"
+        app:layout_constraintTop_toBottomOf="@+id/textViewWorkoutTitle" />
+
+    <TextView
+        android:id="@+id/textViewSecondsLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="s"
+        android:textSize="24sp"
+        app:layout_constraintStart_toEndOf="@+id/textViewWorkoutTimeRemaining"
+        app:layout_constraintTop_toTopOf="@+id/textViewWorkoutTimeRemaining" />
+
+    <ProgressBar
+        android:id="@+id/progressBarWorkout"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewWorkoutTimeRemaining" />
+
+    <Button
+        android:id="@+id/buttonStopWorkout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/circle_button"
+        android:text="Stop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/progressBarWorkout" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
